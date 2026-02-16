@@ -15,3 +15,17 @@ psql
 ALTER USER ddsonar WITH ENCRYPTED password 'mwd#2%#!!#%rgs';
 CREATE DATABASE ddsonarqube OWNER ddsonar;
 GRANT ALL PRIVILEGES ON DATABASE ddsonarqube to ddsonar;
+\l
+\du
+\q
+exit
+sudo apt install zip -y
+sudo wget
+https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-26.2.0.119303.zip
+ls
+sudo unzip sonarqube-26.2.0.119303.zip
+sudo mv sonarqube-26.2.0.119303 sonarqube
+sudo mv sonarqube /opt/
+sudo groupadd ddsonar
+sudo useradd -d /opt/sonarqube -g ddsonar ddsonar
+sudo chown ddsonar:ddsonar /opt/sonarqube -R
